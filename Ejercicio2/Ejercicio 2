@@ -3,9 +3,24 @@ Author: Epifanía Peralta López
 Title: Ejercicio 2
 ---
 
-# Ejercicio 2
+# Ejercicio 2 - Docker Compose
 
-> Documento que resuelve el ejercicio 2 de la Tarea 3- Despliegue de Aplicaciones Web
+> Documento que resuelve el ejercicio 2 de la Tarea 3- Despliegue de Aplicaciones Web, realizado por Epifanía Peralta López para Despliegue de Aplicaciones Web.
 
 [TOC]
 
+> Este ejercicio se puede resolver utilizando comandos, o Docker Desktop, o combinando ambos.
+
+**Enunciado:** Explorar la imagen de la aplicación **FileBrowser** en este repositorio en GitHub: `https://hub.docker.com/r/hurlenko/filebrowser`.
+
+> El usuario por defecto es **admin** con contraseña `admin`.
+
+Escribir un fichero **compose.yaml** para desplegarla. Los datos se pueden guardar utilizando volúmenes o utilizando bind-mount.
+
+Entregar, al menos, las siguientes capturas de pantalla y los comandos y/o operaciones con Docker Desktop empleados para resolver el ejercicio:
+
+* Captura de pantalla y documento donde se vea el fichero **docker-compose.yaml** que has creado.
+
+Al explorar la imagen indicada, me informa de lo siguiente:
+
+<img src="./Ejercicio%202.assets/filebrowser%20-%20Imagen%20de%20Docker%20%7C%20Docker%20Hub%202025-04-01%2018-16-49.png" alt="filebrowser - Imagen de Docker | Docker Hub 2025-04-01 18-16-49" style="zoom:33%;" />
