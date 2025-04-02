@@ -3,9 +3,45 @@ Author: Epifanía Peralta López
 Title: Ejercicio 3
 ---
 
-# Ejercicio 3
+# Ejercicio 3 - imagen con Dockerfile - Aplicación web
 
 > Documento que resuelve el ejercicio 3 de la Tarea 3- Despliegue de Aplicaciones Web
 
 [TOC]
+
+> Para la realización de este ejercicio es necesario tener una cuenta en Docker Hub.
+>
+> Se puede resolver utilizando comandos, o Docker Desktop, o combinando ambos.
+
+**Enunciado:** Necesitamos un fichero **Dockerfile** que automatice las siguientes operaciones para crear una imagen que contenga un servidor con un sitio web y un script php. Características de la imagen:
+
+* Usa un contenedor que ejecute una instancia de la imagen `php:7.4-apache`, que se llame `ejercicio3` y que sea accesible desde un navegador en el puerto 8000.
+* Coloca en el directorio raíz del servicio web (`/var/www/html`) un "sitio web" donde figure tu nombre -el sitio deberá tener al menos un archivo `índex.html` sencillo y un archivo `.css`
+* Coloca en ese mismo directorio raíz el siguiente script `php`, llámalo `fecha.php`
+
+```php
+<?php
+	setlocale(LC_TIME, "es_ES.UTF-8");
+	$mes_actual = strftime("%B");
+	$fecha_actual = date("d/m/Y");
+	$hora_actual = date("H:i:s");
+	echo "<h1>Información</h1>";
+	echo "<p>Hoy es $fecha_actual</p>";
+	echo "<p>El mes es: <strong>$mes_actual</strong></p>";
+	echo "<p>Hora: $hora_actual</p>";
+?>
+```
+
+* Ver la salida del script `fecha.php` y de la página `index.html` en el navegador.
+* Una vez creada la imagen, súbela a tu cuenta de Docker Hub:
+  * Borra la imagen de tu Docker local
+  * Baja ('pull') de tu cuenta la imagen que acabas de subir.
+  * Muestra las imágenes que tienes.
+  * Ejecuta un contenedor usando esa imagen.
+
+
+
+**Resolución:**
+
+1. Creación inicial del contenedor.
 
