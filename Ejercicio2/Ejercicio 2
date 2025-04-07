@@ -23,4 +23,26 @@ Entregar, al menos, las siguientes capturas de pantalla y los comandos y/o opera
 
 Al explorar la imagen indicada, me informa de lo siguiente:
 
-<img src="./Ejercicio%202.assets/filebrowser%20-%20Imagen%20de%20Docker%20%7C%20Docker%20Hub%202025-04-01%2018-16-49.png" alt="filebrowser - Imagen de Docker | Docker Hub 2025-04-01 18-16-49" style="zoom:33%;" />
+![filebrowser - Imagen de Docker | Docker Hub 2025-04-01 18-27-41](./Ejercicio%202.assets/filebrowser%20-%20Imagen%20de%20Docker%20%7C%20Docker%20Hub%202025-04-01%2018-27-41.png)
+
+Parto de esa información para escribir el **compose.yaml**.
+
+*Descripción de los puertos*: el `8080` como puerto predeterminado del explorador de archivos.
+
+*Variables de entorno admitidas:*
+
+En la imagen explica que FileBrowser usa una base de datos interna llamada **Bolt DB** que es un archivo único administrado automáticamente por la aplicación, de forma que no se necesita configurar un servidor de base de datos externo (como MySQL) para que funcione. 
+
+FileBrower tiene una interfaz de línea de comandos (CLI) con la que se puede:
+
+1. Crear la base de datos
+2. Gestionar usuarios.
+3. Configurar opciones sin necesidad de entrar en la interfaz web.
+
+Las variables de entorno llevan el prefijo "FB_" seguido por el nombre de la opción en mayúsculas. Así, para la "Database", la variable de entorno sería: FB_DATABASE.
+
+*Volúmenes admitidos:* 
+
+Voy a montar un bind-mount, ya que me permite ver en el sistema de archivos de mi macOS dónde se guardan los datos de FileBrowser. Para eso, creo un archivo en `Ejercicio 2/FileBrowser`. 
+
+![Monosnap compose.yaml — DespliegueTarea3 2025-04-01 19-31-38](./Ejercicio%202.assets/Monosnap%20compose.yaml%20%E2%80%94%20DespliegueTarea3%202025-04-01%2019-31-38.png)
