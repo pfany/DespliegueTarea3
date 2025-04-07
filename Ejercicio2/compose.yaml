@@ -9,9 +9,11 @@ services:
       - "8080:8080"
     volumes:
       - ./filebrowser:/srv
+      - ./config:/config
     environment:
       - FB_USER=admin
       - FB_PASS=admin
+    command: ["--root",  "/srv", "--database", "/config/filebrowser.db"]
     networks:
       - filebrowser_net
 

@@ -23,7 +23,7 @@ Entregar, al menos, las siguientes capturas de pantalla y los comandos y/o opera
 
 Al explorar la imagen indicada en Docker Hub, me informa de lo siguiente:
 
-![filebrowser - Imagen de Docker | Docker Hub 2025-04-01 18-27-41](./Ejercicio%202.assets/filebrowser%20-%20Imagen%20de%20Docker%20%7C%20Docker%20Hub%202025-04-01%2018-27-41.png)
+![filebrowser - Imagen de Docker | Docker Hub 2025-04-01 18-27-41](./Ejercicio%202_Docker%20Compose.assets/filebrowser%20-%20Imagen%20de%20Docker%20%7C%20Docker%20Hub%202025-04-01%2018-27-41.png)
 
 Parto de esa información para escribir el **compose.yaml**.
 
@@ -43,7 +43,7 @@ Las variables de entorno llevan el prefijo "FB_" seguido por el nombre de la opc
 
 Este es el fichero `docker-compose.yaml` creado:
 
-![Monosnap compose.yaml — DespliegueTarea3 2025-04-01 19-31-38](./Ejercicio%202.assets/Monosnap%20compose.yaml%20%E2%80%94%20DespliegueTarea3%202025-04-01%2019-31-38.png)
+![Monosnap compose.yaml — DespliegueTarea3 2025-04-01 19-31-38](./Ejercicio%202_Docker%20Compose.assets/Monosnap%20compose.yaml%20%E2%80%94%20DespliegueTarea3%202025-04-01%2019-31-38.png)
 
 ```yaml
 version: '3.8'
@@ -73,7 +73,7 @@ networks:
 
 Para el almacenamiento puedo usar Bind Mount para guardar los datos de forma persistente. Ubicación:
 
-<img src="./Ejercicio%202.assets/Monosnap%20filebrowser%202025-04-07%2018-49-19.png" alt="Monosnap filebrowser 2025-04-07 18-49-19" style="zoom:33%;" />
+<img src="./Ejercicio%202_Docker%20Compose.assets/Monosnap%20filebrowser%202025-04-07%2018-49-19.png" alt="Monosnap filebrowser 2025-04-07 18-49-19" style="zoom:33%;" />
 
 * Pongo en marcha el servicio desde la carpeta Ejercicio2:
 
@@ -81,7 +81,7 @@ Para el almacenamiento puedo usar Bind Mount para guardar los datos de forma per
 docker compose up -d
 ```
 
-<img src="./Ejercicio%202.assets/Monosnap%20Ejercicio2%20%E2%80%94%20-zsh%20%E2%80%94%20131%C3%9744%202025-04-07%2019-09-05(1).png" alt="Monosnap Ejercicio2 — -zsh — 131×44 2025-04-07 19-09-05(1)" style="zoom:25%;" />
+<img src="./Ejercicio%202_Docker%20Compose.assets/Monosnap%20Ejercicio2%20%E2%80%94%20-zsh%20%E2%80%94%20131%C3%9744%202025-04-07%2019-09-05(1).png" alt="Monosnap Ejercicio2 — -zsh — 131×44 2025-04-07 19-09-05(1)" style="zoom:25%;" />
 
 * Abro mi navegador en:
 
@@ -89,11 +89,11 @@ docker compose up -d
 http://localhost:8080
 ```
 
-<img src="./Ejercicio%202.assets/Monosnap%20Iniciar%20sesio%CC%81n%20-%20File%20Browser%202025-04-07%2019-11-47(1).png" alt="Monosnap Iniciar sesión - File Browser 2025-04-07 19-11-47(1)" style="zoom:25%;" />
+<img src="./Ejercicio%202_Docker%20Compose.assets/Monosnap%20Iniciar%20sesio%CC%81n%20-%20File%20Browser%202025-04-07%2019-11-47(1).png" alt="Monosnap Iniciar sesión - File Browser 2025-04-07 19-11-47(1)" style="zoom:25%;" />
 
 * Inicio sesión y cambio el lenguaje a español:
 
-<img src="./Ejercicio%202.assets/Monosnap%20Profile%20Settings%20-%20File%20Browser%202025-04-07%2019-14-56(1).png" alt="Monosnap Profile Settings - File Browser 2025-04-07 19-14-56(1)" style="zoom:25%;" />
+<img src="./Ejercicio%202_Docker%20Compose.assets/Monosnap%20Profile%20Settings%20-%20File%20Browser%202025-04-07%2019-14-56(1).png" alt="Monosnap Profile Settings - File Browser 2025-04-07 19-14-56(1)" style="zoom:25%;" />
 
 * ¿Cómo funciona esta aplicación?
 
@@ -103,15 +103,15 @@ En mi caso he creado un Bind Mount, por lo que todo lo que FileBrowser gestione 
 
 Voy a crear una carpeta llamada `Documentos` y dentro de ella el archivo `Tarea3`
 
-<img src="./Ejercicio%202.assets/Monosnap%20Tarea3.txt%20-%20Archivos%20-%20File%20Browser%202025-04-07%2019-34-26.png" alt="Monosnap Tarea3.txt - Archivos - File Browser 2025-04-07 19-34-26" style="zoom:25%;" />
+<img src="./Ejercicio%202_Docker%20Compose.assets/Monosnap%20Tarea3.txt%20-%20Archivos%20-%20File%20Browser%202025-04-07%2019-34-26.png" alt="Monosnap Tarea3.txt - Archivos - File Browser 2025-04-07 19-34-26" style="zoom:25%;" />
 
-<img src="./Ejercicio%202.assets/Monosnap%20Documentos%20-%20Archivos%20-%20File%20Browser%202025-04-07%2019-38-30.png" alt="Monosnap Documentos - Archivos - File Browser 2025-04-07 19-38-30" style="zoom:25%;" />
+<img src="./Ejercicio%202_Docker%20Compose.assets/Monosnap%20Documentos%20-%20Archivos%20-%20File%20Browser%202025-04-07%2019-38-30.png" alt="Monosnap Documentos - Archivos - File Browser 2025-04-07 19-38-30" style="zoom:25%;" />
 
 Bien, a la hora de comprobar que efectivamente ha quedado ese documento guardado en `./filebrowser`, no lo hace.
 
 En el contenedor, en **View configurations** figura:
 
-<img src="./Ejercicio%202.assets/Monosnap%20ejercicio2%20-%20App%20-%20Docker%20Desktop%202025-04-07%2021-04-43.png" alt="Monosnap ejercicio2 - App - Docker Desktop 2025-04-07 21-04-43" style="zoom:25%;" />
+<img src="./Ejercicio%202_Docker%20Compose.assets/Monosnap%20ejercicio2%20-%20App%20-%20Docker%20Desktop%202025-04-07%2021-04-43.png" alt="Monosnap ejercicio2 - App - Docker Desktop 2025-04-07 21-04-43" style="zoom:25%;" />
 
 De modo que Docker Desktop indica que está usando `/config/filebrowser.db` y no encuentra en ese directorio `/config/` del contenedor lo que busca.
 
@@ -144,4 +144,62 @@ networks:
 
 Y así, creo una nueva carpeta al mismo nivel que `compose.yaml` y que `/filebrowser/`  llamada `/config/` :
 
-<img src="./Ejercicio%202.assets/Monosnap%20compose.yaml%20%E2%80%94%20DespliegueTarea3%202025-04-07%2021-13-58(1).png" alt="Monosnap compose.yaml — DespliegueTarea3 2025-04-07 21-13-58(1)" style="zoom:25%;" />
+<img src="./Ejercicio%202_Docker%20Compose.assets/Monosnap%20compose.yaml%20%E2%80%94%20DespliegueTarea3%202025-04-07%2021-13-58(1).png" alt="Monosnap compose.yaml — DespliegueTarea3 2025-04-07 21-13-58(1)" style="zoom:25%;" />
+
+El siguiente paso es detener el contenedor y eliminarlo, para volver a crearlo con la nueva configuración:
+
+```bash
+docker compose down
+docker compose up -d
+```
+
+<img src="./Ejercicio%202_Docker%20Compose.assets/Monosnap%20Ejercicio2%20%E2%80%94%20-zsh%20%E2%80%94%20131%C3%9744%202025-04-07%2021-21-32.png" alt="Monosnap Ejercicio2 — -zsh — 131×44 2025-04-07 21-21-32" style="zoom:25%;" />
+
+Sigue sin funcionar. Utilizando:
+
+```bash
+docker logs filebrowser_tarea3
+```
+
+<img src="./Ejercicio%202_Docker%20Compose.assets/Monosnap%20Ejercicio2%20%E2%80%94%20-zsh%20%E2%80%94%20131%C3%9724%202025-04-07%2022-40-06(1).png" alt="Monosnap Ejercicio2 — -zsh — 131×24 2025-04-07 22-40-06(1)" style="zoom:33%;" />
+
+Indica que el contenedor está ignorando mi volumen `./config:/config/` y no está utilizando esa ruta como ubicación de su base de datos, al no estar definido `--database /config/filebrowser.db`
+
+Modifico el `compose.yaml` para incorporar en `command`:
+
+```yaml
+version: '3.8'
+
+services:
+  filebrowser:
+    image: hurlenko/filebrowser
+    container_name: filebrowser_tarea3
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./filebrowser:/srv
+      - ./config:/config
+    environment:
+      - FB_USER=admin
+      - FB_PASS=admin
+    command: ["--root",  "/srv", "--database", "/config/filebrowser.db"]
+    networks:
+      - filebrowser_net
+
+networks:
+  filebrowser_net:
+
+```
+
+Y ahora ya funciona el almacenamiento.
+
+He creado un archivo `Pruebas.txt` desde el FileBrowser y efectivamente ya lo almacena en el equipo:
+
+<img src="./Ejercicio%202_Docker%20Compose.assets/Monosnap%20srv%20-%20Archivos%20-%20File%20Browser%202025-04-07%2022-45-39.png" alt="Monosnap srv - Archivos - File Browser 2025-04-07 22-45-39" style="zoom:25%;" />
+
+<img src="./Ejercicio%202_Docker%20Compose.assets/Monosnap%20filebrowser%202025-04-07%2022-46-12(1).png" alt="Monosnap filebrowser 2025-04-07 22-46-12(1)" style="zoom:25%;" />
+
+
+
+> Documento realizado para Despliegue_Tarea3
