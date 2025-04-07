@@ -6,7 +6,7 @@ typora-copy-images-to: ./Ejercicio1.assets
 
 # Ejercicio 1 - Contenedores en red y Docker Desktop
 
-> Documento que resuelve el ejercicio 1 de la Tarea 3- Despliegue de Aplicaciones Web
+> Documento que resuelve el ejercicio 1 de la Tarea 3- Despliegue de Aplicaciones Web, realizado por Epifanía Peralta López.
 
 [TOC]
 
@@ -134,7 +134,7 @@ Los pasos a seguir para crear el contenedor **phpmyadmin_tarea3** son:
 <img src="./Ejercicio1.assets/Monosnap%20Images%20-%20Docker%20Desktop%202025-03-29%2021-45-30.png" alt="Monosnap Images - Docker Desktop 2025-03-29 21-45-30" style="zoom:33%;" />
 
 * Conecto phpmyadmin_tarea3 a la red redej1, utilizando el PortNavigator:
-  * Primero tuve que Docker Desktop, como para que actualizara, porque no me salía el nuevo contenedor en ninguna red.
+  * Primero tuve que cerrar Docker Desktop, como para que actualizara, porque no me salía el nuevo contenedor en ninguna red.
   * Al volver a abrirlo, ya me sale que está en la red `bridge`, por lo que lo desconecto de ahí.
 
 <img src="./Ejercicio1.assets/Monosnap%20extension%20-%20Docker%20Desktop%202025-03-29%2022-11-21(1).png" alt="Monosnap extension - Docker Desktop 2025-03-29 22-11-21(1)" style="zoom:33%;" />
@@ -203,3 +203,30 @@ Muestro el contenido de `Resource usage` instalado con los 2 contenedores activo
 
 * Borra los contenedores, la red y los volúmenes utilizados.
 
+Para borrar los contenedores, lo primero es detenerlos, desde la pestaña de Containers.
+
+<img src="./Ejercicio1.assets/Monosnap%20Containers%20-%20Docker%20Desktop%202025-04-07%2017-31-02(1).png" alt="Monosnap Containers - Docker Desktop 2025-04-07 17-31-02(1)" style="zoom:33%;" />
+
+Y luego, click en el icono de la papelera para borrar el contenedor:
+
+<img src="./Ejercicio1.assets/Monosnap%20Containers%20-%20Docker%20Desktop%202025-04-07%2017-32-43.png" alt="Monosnap Containers - Docker Desktop 2025-04-07 17-32-43" style="zoom:25%;" />
+
+Realizo la misma operación con el contenedor de mariadb_tarea3:
+
+<img src="./Ejercicio1.assets/Monosnap%20Containers%20-%20Docker%20Desktop%202025-04-07%2017-33-53.png" alt="Monosnap Containers - Docker Desktop 2025-04-07 17-33-53" style="zoom:25%;" />
+
+Y una vez que la red `redej1` no tiene contenedores conectados, puedo borrarla,  cerrando la ventana en el `x` de la esquina superior derecha:
+
+<img src="./Ejercicio1.assets/Monosnap%20extension%20-%20Docker%20Desktop%202025-04-07%2017-35-47.png" alt="Monosnap extension - Docker Desktop 2025-04-07 17-35-47" style="zoom:25%;" />
+
+En cuanto a los volúmenes, en mi caso usé un Bind Mount, así que no aparece como volumen en Docker Desktop:
+
+<img src="./Ejercicio1.assets/Monosnap%20Volumes%20-%20Docker%20Desktop%202025-04-07%2017-38-01.png" alt="Monosnap Volumes - Docker Desktop 2025-04-07 17-38-01" style="zoom:25%;" />
+
+El directorio que usé  para el Bind Mount figura en mi sistema de archivos (fuera de Docker): `users/fanyperalta/docker/mariadb_data` y en la carpeta DAW figura la tabla `módulos` creada.
+
+<img src="./Ejercicio1.assets/Monosnap%20DAW%202025-04-07%2017-26-49.png" alt="Monosnap DAW 2025-04-07 17-26-49" style="zoom:25%;" />
+
+En este caso, para borrar la carpeta `DAW` tengo que hacerlo manualmente desde la terminal o el Finder.
+
+> Ejercicio1 de la Tarea3 de Despliegue.
